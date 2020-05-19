@@ -9,12 +9,14 @@ public class Page {
 
     //constructor
 
+    //For the final page.
     public Page(int imageId, int textId) {
         this.imageId = imageId;
         this.textId = textId;
         this.isFinalPage = true;
     }
 
+    //For other pages.
     public Page(int imageId, int textId, Choice choice1, Choice choice2) {
         this.imageId = imageId;
         this.textId = textId;
@@ -22,6 +24,7 @@ public class Page {
         this.choice2 = choice2;
     }
 
+    //Accessors and mutators.
     public int getImageId() {
         return imageId;
     }
