@@ -52,6 +52,7 @@ public class StoryActivity extends AppCompatActivity {
         loadPage(0);
     }
     private void loadPage(int pageNumber){
+        pageStack.push(pageNumber);
         final Page page = story.getPage(pageNumber);
         Drawable image = ContextCompat.getDrawable(this,page.getImageId());
         pageImageView.setImageDrawable(image);
@@ -75,6 +76,7 @@ public class StoryActivity extends AppCompatActivity {
         }
     }
     private void loadButton(final Page page){
+
         choiceButton1.setVisibility(View.VISIBLE);
         choiceButton1.setText(page.getChoice1().getTextId());
         choiceButton1.setOnClickListener(new View.OnClickListener() {
@@ -94,5 +96,19 @@ public class StoryActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+
+
+    @Override
+    public void onBackPressed(){
+        pageStack.pop();
+        if(pageStack.isEmpty()){
+            super.onBackPressed();
+        }
+        else{
+            loadPage(pageStack.pop());
+        }
     }
 }

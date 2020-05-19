@@ -1,5 +1,5 @@
 <resources>
-    <string name = "app_name">Singals From Mars</string>
+    <string name = "app_name">OwnStoryApp</string>
     <string name = "user_name">name</string>
 
     <string name="page0">On your return trip from studying Saturn\'s rings, you hear a distress signal that seems to be coming from the surface of Mars. It\'s strange because there hasn\'t been a colony there in years. Even stranger, it\'s calling you by name: \"Help me, %1$s, you\'re my only hope.\"</string>
